@@ -31,6 +31,69 @@ Tecnologias Utilizadas:
 - Pagamentos: Pix-Static (geração de QR Code Pix)
 - dotenv para configuração de variáveis de ambiente
 
+  ## Instalação e Configuração
+
+### Pré-requisitos
+
+* Node.js instalado
+* MySQL Workbench instalado
+
+### 1. Instalar dependências
+
+```bash
+npm install
+```
+
+### 2. Criar o banco de dados
+
+Crie manualmente um banco de dados chamado:
+
+```sql
+CREATE DATABASE e_commerce;
+```
+
+### 3. Configurar as variáveis do projeto
+
+#### index.js
+
+Configure a variável `secret` do `express-session` (linha 21).
+
+#### db/db.js
+
+Configure os dados de conexão com o banco:
+
+* Nome do banco
+* Usuário
+* Senha
+* Host
+
+#### service/service.js
+
+Configure as seguintes variáveis para geração do QR Code PIX:
+
+* `merchantName`
+* `pixKey`
+
+### 4. Iniciar o projeto
+
+```bash
+npm start
+```
+
+ou
+
+```bash
+node index.js
+```
+
+### Acesso
+
+Após iniciar o servidor, acesse:
+
+```text
+http://localhost:3000
+```
+
 
 Painel admin : 
 
